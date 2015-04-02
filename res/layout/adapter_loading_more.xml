@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.mika.cheggmeout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="horizontal" >
+
+    <com.mika.cheggmeout.ui.components.CustomFontTextView
+        android:id="@+id/loaing_textView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="@string/loading_"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        custom:FontFamily="Roboto_Regular" />
+
+</LinearLayout>

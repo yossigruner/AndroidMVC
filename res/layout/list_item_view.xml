@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.mika.cheggmeout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff888888"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/user_imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/todo"
+            android:scaleType="fitCenter" />
+
+        <com.mika.cheggmeout.ui.components.CustomFontTextView
+            android:id="@+id/name_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="20dp"
+            android:layout_toRightOf="@id/user_imageView"
+            android:ellipsize="end"
+            android:lines="1"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            custom:FontFamily="Roboto_Regular" />
+
+        <com.mika.cheggmeout.ui.components.CustomFontTextView
+            android:id="@+id/time_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="20dp"
+            android:text="3 days ago"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            custom:FontFamily="Roboto_Regular" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header" >
+
+        <ImageView
+            android:id="@+id/image_imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/todo"
+            android:scaleType="centerCrop" />
+
+        <com.mika.cheggmeout.ui.components.CustomFontTextView
+            android:id="@+id/text_textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            custom:FontFamily="Roboto_Regular" />
+    </FrameLayout>
+
+</RelativeLayout>
